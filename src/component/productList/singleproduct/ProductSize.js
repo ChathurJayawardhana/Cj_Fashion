@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material'
 import React, { useState } from 'react'
+import ProductSizebox from './productsize/ProductSizebox';
 
 const defaultSize = ["xs","s","M","L","xl"];
 
@@ -29,12 +30,13 @@ export default function ProductSize({avilableSize}) {
 
   return (
     <div>
-      <Grid container>
+      <Grid container spacing={1}>
         <Grid item xs={1}></Grid>
         {finalSizeList.map((val,key)=>{
           return(
             <Grid key={key}item xs={2}>
-            {val.size}
+              <ProductSizebox size={val.size} isAvailable={val.isAvailable} />
+            
           </Grid> 
           );
         })}

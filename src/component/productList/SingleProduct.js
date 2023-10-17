@@ -10,10 +10,11 @@ const product = {
     productType :"dress5",
     price:"8400",
     size:["xs","sm","L"],
-    images :[
+    images:[0,1],
+   /* images :[
         "https://images.ctfassets.net/hrltx12pl8hq/3AnnkVqrlhrqb9hjlMBzKX/693a8e5d40b4b6c55a7673ca4c807eef/Girl-Stock",
         "https://www.shutterstock.com/image-photo/happy-asian-woman-holding-smartphone-260nw-2198262159.jpg"
-    ],
+    ],*/
 }
 
 export default function () {
