@@ -12,6 +12,7 @@ import TopsLayout from './layout/tops/TopsLayout';
 import Learnlayout from './layout/layoutlearning/Learnlayout';
 import HeaderLayout from './layout/common/HeaderLayout';
 import FooterLayout from './layout/common/FooterLayout';
+import ProductDetails from './layout/productdetails/ProductDetails';
 
 //test comment
 //coment 2
@@ -31,6 +32,7 @@ function App() {
             <Route path='/tshirts' element={<TshirtLayout/>}/>
             <Route path='/tops' element={<TopsLayout/>}/>
             <Route path='/learn' element={<Learnlayout/>}/>
+            <Route path='/details' element={<ProductDetails/>}/>
 
           </Routes>
 

@@ -21,7 +21,7 @@ export default function ({product}) {
     const {images,productName,productType,price,size} = product;
       return (
     <div style={{padding:"8px"}}>
-        <Link to={"/"} style={{textDecoration:"none",color:"black"}}>
+        <Link to={"/details"} style={{textDecoration:"none",color:"black"}}>
             <div style={{padding:"5px",width:"100%",borderRadius:"10px",paddingBottom:"20px"}}>
             <Productimage images={images}/>
             <ProductName name={productName} type={productType}/>
