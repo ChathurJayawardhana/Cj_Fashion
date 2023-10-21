@@ -4,7 +4,10 @@ import ReactImageMagnify from 'react-image-magnify';
 export default function SingleImage() {
   return (
     <div>
-      <ReactImageMagnify {...{
+      <ReactImageMagnify 
+      
+      {...{
+       
     smallImage: {
         alt: 'Wristwatch by Ted Baker London',
         isFluidWidth: true,
