@@ -6,6 +6,7 @@ export default function SingleImage({smallImage,largeImage}) {
   return (
     <div>
       <ReactImageMagnify 
+      
       enlargedImagePosition='over'
       isHintEnabled
       {...{
@@ -18,7 +19,7 @@ export default function SingleImage({smallImage,largeImage}) {
     largeImage: {
         src: largeImage,
         width: 1200,
-        height: 1800
+        height: 1500
     }
 }} />
     </div>
