@@ -1,20 +1,22 @@
 import React from 'react'
-import ReactImageMagnify from 'react-image-magnify';
+import ReactImageMagnify from 'react-image-magnify'
 
-export default function SingleImage() {
+
+export default function SingleImage({smallImage,largeImage}) {
   return (
     <div>
       <ReactImageMagnify 
-      
+      enlargedImagePosition='over'
+      isHintEnabled
       {...{
        
     smallImage: {
         alt: 'Wristwatch by Ted Baker London',
         isFluidWidth: true,
-        src: watchImg300
+        src: smallImage
     },
     largeImage: {
-        src: watchImg1200,
+        src: largeImage,
         width: 1200,
         height: 1800
     }
