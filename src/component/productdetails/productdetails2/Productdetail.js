@@ -4,3 +4,4 @@ export {default as Pricesection} from "./Pricecomponent";
 export {default as QtyTotalprice} from "./QtyTotalprice";
 export {default as Sizeselect} from "./Sizeselect";
 export {default as Ratingcomponent} from "./Ratingcomponent";
+export {default as Description} from "./Productdescription";
