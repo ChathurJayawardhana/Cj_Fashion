@@ -5,28 +5,31 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SingleImage from '../../../component/productdetails/imageslider/SingleImage';
-import img01 from "../../../images/productimages/img 01.jpg";
-import img011 from "../../../images/productimages/img 011.jpg";
+import { useMediaQuery } from '@mui/material';
 
 
-export default function ImageSlider() {
+
+export default function ImageSlider({images}) {
+
+  const maxwidth1336 = useMediaQuery("(max-width:1336)");
   return (
     <div>
        <Swiper
      modules={[ Pagination]}
-      spaceBetween={25}
+      spaceBetween={maxwidth1336 ? 25 : 20}
       slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       pagination={{ clickable: true }}
-    >
-      <SwiperSlide>
-         <SingleImage smallImage={img01} largeImage={img01}/>
-      </SwiperSlide>
-      <SwiperSlide>
-      <SingleImage smallImage={img011} largeImage={img011}/>
-      </SwiperSlide>
-     
+    > 
+    {images.map((val,key) => {
+      return(
+        <SwiperSlide 
+        style={{width: maxwidth1336 ? "450px" : "400px",
+        height:"450px"}} key={key} >
+        <SingleImage smallImage={val} largeImage={val}/>
+     </SwiperSlide>
+      );
+    })}
+      
     </Swiper>
     </div>
   )

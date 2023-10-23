@@ -2,6 +2,8 @@ import React from 'react'
 import Commonlayout from '../common/Commonlayout'
 import { Grid } from '@mui/material'
 import ImageSlider from './left/ImageSlider'
+import img01 from "../../images/productimages/img 01.jpg";
+import img011 from "../../images/productimages/img 011.jpg";
 
 export default function ProductDetails() {
   return (
@@ -16,7 +18,7 @@ export default function ProductDetails() {
           }}>
             <Grid container spacing={3} alignContent='center'>
                 <Grid item xs={12} md={6} lg={4}>
-                 <ImageSlider/>
+                 <ImageSlider images = {[img01,img011]}/>
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={8}>
