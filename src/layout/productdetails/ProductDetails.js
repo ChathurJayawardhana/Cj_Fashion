@@ -4,6 +4,7 @@ import { Grid } from '@mui/material'
 import ImageSlider from './left/ImageSlider'
 import img01 from "../../images/productimages/img 01.jpg";
 import img011 from "../../images/productimages/img 011.jpg";
+import Productdetails2 from './right/Productdetails2';
 
 export default function ProductDetails() {
   return (
@@ -14,7 +15,8 @@ export default function ProductDetails() {
           marginTop:"20px",
           borderRadius:"8px",
           marginLeft:"20px",
-          marginRight:"20px"
+          marginRight:"20px",
+          padding:"20px"
           }}>
             <Grid container spacing={3} alignContent='center'>
                 <Grid item xs={12} md={6} lg={4}>
@@ -22,7 +24,7 @@ export default function ProductDetails() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={8}>
-                         details
+                         <Productdetails2/>
                    </Grid>
             </Grid>
         </div>
