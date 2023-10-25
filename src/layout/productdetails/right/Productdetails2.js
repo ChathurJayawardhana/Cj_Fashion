@@ -4,6 +4,7 @@ import {
   Ratingcomponent,
   Pricesection,
   Description,
+  Sizeselect
  } from "../../../component/productdetails/productdetails2/Productdetail"
 
 export default function Productdetails2() {
@@ -13,14 +14,18 @@ export default function Productdetails2() {
     <div style={{float:"left"}}>
     <Ratingcomponent/>
     </div>
-    <br/>
-    <div>
+    <br/> <br/>
+    <div  style={{float:"left"}} >
     <Pricesection value={"1400"}/>
     </div>
-    <div>
+    <br/><br/>
+    <div style={{marginTop:"12px",float:"left"}}>
       <Description description = { "this is the moden T shirt design "}/>
     </div>
-     
+    <br/><br/>
+    <div style={{marginTop:"12px",float:"left"}}>
+      <Sizeselect/>
+    </div>
     </div>
   )
 }
