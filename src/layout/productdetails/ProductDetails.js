@@ -6,6 +6,18 @@ import img01 from "../../images/productimages/img 01.jpg";
 import img011 from "../../images/productimages/img 011.jpg";
 import Productdetails2 from './right/Productdetails2';
 
+const product = {
+  productName : "product 0",
+  productType :"dress5",
+  price:"8400",
+  size:["xs","sm","L"],
+  images:[0,2],
+  description:"This is the description of above product",
+  availbleqty:1000,
+
+ 
+}
+
 export default function ProductDetails() {
   return (
     <div>
@@ -24,7 +36,7 @@ export default function ProductDetails() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={8}>
-                         <Productdetails2/>
+                         <Productdetails2 product={product}/>
                    </Grid>
             </Grid>
         </div>

@@ -7,24 +7,25 @@ import {
   Sizeselect
  } from "../../../component/productdetails/productdetails2/Productdetail"
 
-export default function Productdetails2() {
+export default function Productdetails2({product}) {
+  const { productName,productType,price, size,  availbleqty,description} =product;
   return (
     <div style={{padding:"10px"}}>
-    <ProductNamecomponent name={"product_0"} type={"Tshirt"} isInStock={1}/>
+    <ProductNamecomponent name={productName} type={productType} isInStock={ availbleqty>1}/>
     <div style={{float:"left"}}>
     <Ratingcomponent/>
     </div>
     <br/> <br/>
     <div  style={{float:"left"}} >
-    <Pricesection value={"1400"}/>
+    <Pricesection value={price}/>
     </div>
     <br/><br/>
     <div style={{marginTop:"12px",float:"left"}}>
-      <Description description = { "this is the moden T shirt design "}/>
+      <Description description = {description}/>
     </div>
     <br/><br/>
     <div style={{marginTop:"12px",float:"left"}}>
-      <Sizeselect/>
+      <Sizeselect size= {size}/>
     </div>
     </div>
   )
