@@ -6,6 +6,7 @@ import {
   Description,
   Sizeselect
  } from "../../../component/productdetails/productdetails2/Productdetail"
+import Addtocartsection from './Poductdetails/Addtocartsection';
 
 export default function Productdetails2({product}) {
   const { productName,productType,price, size,  availbleqty,description} =product;
@@ -27,6 +28,10 @@ export default function Productdetails2({product}) {
     <div style={{marginTop:"12px",float:"left"}}>
       <Sizeselect size= {size}/>
     </div>
+    <br/><br/><br/>
+    <hr/>
+    <br/><br/>
+    <Addtocartsection/>
     </div>
   )
 }
