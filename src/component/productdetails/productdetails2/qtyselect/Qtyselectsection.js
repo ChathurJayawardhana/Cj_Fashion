@@ -25,7 +25,7 @@ export default function Qtyselectsection() {
            </Grid>
            {qtybuttons.map((val,key)=>{
            return(
-           <Grid item key={key} style={{marginLeft:"15px"}}>
+           <Grid item xs={1} md={2} key={key} style={{marginLeft:"15px"}}>
             
             <IconButton style={{
                 border:"1px solid grey",
