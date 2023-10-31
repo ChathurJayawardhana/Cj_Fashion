@@ -14,9 +14,9 @@ const qtybuttons = [
 
 ]
 
-export default function Qtyselectsection() {
+export default function Qtyselectsection({qty,setQty}) {
 
-const [qty,setQty] = React.useState(1);
+
 
 const handleqtyChange = (type) =>{
    if("add" === type && qty+1 < 11) {

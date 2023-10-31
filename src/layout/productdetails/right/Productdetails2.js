@@ -1,12 +1,14 @@
 import React from 'react'
+import { Grid } from '@mui/material';
 import { 
   ProductNamecomponent, 
   Ratingcomponent,
   Pricesection,
   Description,
-  Sizeselect
+  Sizeselect,
+  AddtoCart
  } from "../../../component/productdetails/productdetails2/Productdetail"
-import Addtocartsection from './Poductdetails/Addtocartsection';
+import Qtyselect from './Poductdetails/Qtyselect';
 
 export default function Productdetails2({product}) {
   const { productName,productType,price, size,  availbleqty,description} =product;
@@ -31,7 +33,17 @@ export default function Productdetails2({product}) {
     <br/><br/><br/>
     <hr/>
     <br/><br/>
-    <Addtocartsection/>
+    <Qtyselect productprize={price}/>
+    <div style={{marginTop:"15px"}}>
+      <Grid container justifyContent={"flex-end"} >
+        <Grid item>
+        <AddtoCart/>
+        </Grid>
+
+      </Grid>
+   
+    </div>
+    
     </div>
   )
 }
