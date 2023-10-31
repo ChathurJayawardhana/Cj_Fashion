@@ -37,7 +37,7 @@ export default function Productdetails2({product}) {
     <div style={{marginTop:"15px"}}>
       <Grid container justifyContent={"flex-end"} >
         <Grid item>
-        <AddtoCart/>
+        <AddtoCart productName={productName}/>
         </Grid>
 
       </Grid>

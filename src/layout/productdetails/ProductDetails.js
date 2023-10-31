@@ -1,6 +1,6 @@
 import React from 'react'
 import Commonlayout from '../common/Commonlayout'
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import ImageSlider from './left/ImageSlider'
 import img01 from "../../images/productimages/img 01.jpg";
 import img011 from "../../images/productimages/img 011.jpg";
@@ -37,6 +37,10 @@ export default function ProductDetails() {
 
                 <Grid item xs={12} md={6} lg={8}>
                          <Productdetails2 product={product}/>
+                         <hr style={{marginTop:"-5px"}}/>
+                         <Typography style={{color:"gray",textAlign:"left",}}>
+                          Note:This is the product 0 if you want this pls add to cart
+                         </Typography>
                    </Grid>
             </Grid>
         </div>
