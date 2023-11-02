@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography } from '@mui/material'
+import { Button, Grid, Typography } from '@mui/material'
 
 export default function Singlecartitem() {
   return (
@@ -15,8 +15,15 @@ export default function Singlecartitem() {
            <Typography>Product type FROCK</Typography>
            <Typography>Product Price LKR.8400.00</Typography>
             </Grid>
-         <Grid item>order details</Grid>
-         <Grid item>remove button</Grid>
+         <Grid item>
+           <Typography>Order Details</Typography>
+           <Typography>Size:M</Typography>
+           <Typography>QTY:4</Typography>
+           <Typography>LKR 35000.00</Typography>
+            </Grid>
+         <Grid item>
+            <Button variant='contained'>Remove</Button>
+         </Grid>
 
       </Grid>
     </div>
