@@ -41,6 +41,7 @@ export default function Productdetails2({product}) {
         </Grid>
 
       </Grid>
+      
    
     </div>
     
