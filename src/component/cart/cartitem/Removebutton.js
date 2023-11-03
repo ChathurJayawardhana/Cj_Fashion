@@ -1,10 +1,17 @@
 import React from 'react'
 import { Button } from '@mui/material'
+import { DeleteForever } from '@material-ui/icons'
 
 export default function Removebutton() {
   return (
-    <div>
-       <Button variant='contained'>Remove</Button>
-    </div>
+   
+       <Button variant='contained' style={{
+        borderRadius:"25px",
+        marginTop:"20px",
+        
+       }}
+        startIcon = {<DeleteForever/>}
+       >Remove</Button>
+   
   )
 }
