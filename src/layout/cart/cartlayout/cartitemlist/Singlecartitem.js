@@ -5,7 +5,11 @@ import Cartproductdetails from '../../../../component/cart/cartitem/Cartproductd
 import Cartoderdetails from '../../../../component/cart/cartitem/Cartoderdetails'
 import Removebutton from '../../../../component/cart/cartitem/Removebutton'
 
-export default function Singlecartitem() {
+export default function Singlecartitem({cartItem}) {
+
+  const {product,order } = cartItem
+  const {productName ,productType, price, description, availbleqty,sku} = product;
+  const {size,qty} = order;
   return (
     <div>
       <Grid container justifyContent={'space-between'}>
@@ -13,10 +17,17 @@ export default function Singlecartitem() {
           <Cartproductimage/>
             </Grid>
          <Grid item>
-           <Cartproductdetails/>
+           <Cartproductdetails 
+           name={productName} 
+           sku={sku}
+           description={description}
+           type={productType}
+           price = {price}
+        
+           />
             </Grid>
          <Grid item>
-          <Cartoderdetails/>
+          <Cartoderdetails size = {size} qty= {qty} price={price}/>
             </Grid>
          <Grid item>
            <Removebutton/>
