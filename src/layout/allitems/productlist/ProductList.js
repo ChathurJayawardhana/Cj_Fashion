@@ -9,32 +9,11 @@ const products = [
     price:"8400",
     size:["xs","sm","L"],
     images:[0,2],
-   
-},
-{
-  productName : "product 1",
-  productType :"dress6",
-  price:"9700",
-  size:["xs","M"],
-  images:[1,3],
+    description:"This is the description of above product",
+    availbleqty:1000,
+    sku : "SKU001",
+  },
  
-},
-{
-  productName : "product 0",
-  productType :"dress5",
-  price:"8400",
-  size:["xs","sm","L"],
-  images:[0,2],
- 
-},
-{
-  productName : "product 1",
-  productType :"dress6",
-  price:"9700",
-  size:["xs","M"],
-  images:[1,3],
- 
-},
 ];
 
 export default function ProductList() {
