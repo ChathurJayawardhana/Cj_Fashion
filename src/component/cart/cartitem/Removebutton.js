@@ -18,6 +18,11 @@ export default function  Removebutton() {
     setOpen(false);
   };
 
+  const handleConfermation = () =>{
+    handleClose();
+  }
+  
+
   return (
     <React.Fragment>
        <Button variant='contained' style={{
@@ -46,7 +51,7 @@ export default function  Removebutton() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>CANSEL</Button>
-          <Button onClick={handleClose} variant='contained' autoFocus>
+          <Button onClick={handleConfermation} variant='contained' autoFocus>
            REMOVE
           </Button>
         </DialogActions>
