@@ -30,7 +30,40 @@ export default function AllItemLayout() {
       let tempProduct = {
          productName : `Product ${i+1}`,
          description:`This is the description ${i+1} of above product`,
-         price : (Math.floor(Math.randam()*(100-4))+5)*100,
+         price : (Math.floor(Math.randam() * 96 )+5)*100,
+         size :
+          randType1 === 0
+          ? randType2 === 0 
+          ? ['xs']
+          : randType3 === 1
+          ? ['xs','s']
+          : randType3 === 2
+          ? ['xs','s','m']
+          : randType3 === 3
+          ? ['xs','s','m','l']
+          :['xs','s','m','l','xl']
+        :randType1 == 1
+        ?randType3 ===1 
+         ? ['s']
+         : randType3 === 2
+         ? ['s','m']
+         : randType3 === 3
+         ? ['s','m','l']
+         : ['s','m','l','xl']
+        :randType1 === 2
+        ?randType3 == 2 
+          ? ['m']
+          :randType3 === 3
+          ? ['m','l']
+          : [ 'm','l','xl']
+        :randType1 === 3 
+        ?randType3 === 3
+          ?['l']
+          : ['l','xl']
+         :['xl'],   
+        
+         availbleqty: Math.round(Math.random()*100),
+         sku :`SKU ${i+1}`,
       };
       console.log(tempProduct);
     }
