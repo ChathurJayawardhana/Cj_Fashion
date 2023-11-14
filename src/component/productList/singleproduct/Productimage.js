@@ -7,13 +7,13 @@ import img102 from '../../../images/productimages/img 102.jpg';
 const imageArray = [img01,img02,img101,img102];
 
 export default function Productimage({images}) {
-    const [imgSrc,setImgSrc] = React.useState(imageArray[images[0]]);
+    const [imgSrc,setImgSrc] = React.useState(img01);
   return (
     <div style={{width:"100%",textAlign:"center"}}>
       <img src={imgSrc}
       style={{width:"100%",height:"auto",borderRadius:"25px",objectFit:"contain",padding:"20px"}}
-      onMouseOver={()=>setImgSrc(imageArray[images[1]])}
-      onMouseOut={()=>setImgSrc(imageArray[images[0]])}
+      onMouseOver={()=>setImgSrc(img01)}
+      onMouseOut={()=>setImgSrc(img101)}
       />
       
     </div>
