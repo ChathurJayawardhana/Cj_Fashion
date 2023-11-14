@@ -1,10 +1,10 @@
 import React from 'react'
 import img01 from '../../../images/productimages/img 01.jpg';
 import img02 from '../../../images/productimages/img 02.jpg';
-import img011 from '../../../images/productimages/img 011.jpg';
-import img022 from '../../../images/productimages/img 022.jpg';
+import img101 from '../../../images/productimages/img 101.jpg';
+import img102 from '../../../images/productimages/img 102.jpg';
 
-const imageArray = [img01,img02,img011,img022];
+const imageArray = [img01,img02,img101,img102];
 
 export default function Productimage({images}) {
     const [imgSrc,setImgSrc] = React.useState(imageArray[images[0]]);

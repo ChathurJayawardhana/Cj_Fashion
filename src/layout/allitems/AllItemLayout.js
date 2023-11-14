@@ -2,9 +2,12 @@ import React from 'react'
 import Commonlayout from '../common/Commonlayout'
 import { Grid } from '@mui/material'
 import ProductList from './productlist/ProductList'
+import { getProductType } from '../../util/util';
 
 export default function AllItemLayout() {
-  const [productlist,setProductlist] = React.useState([]);
+  const [itemlist,setItemList] = React.useState([]);
+
+ 
 /*
   {
     productName : "product 0",
@@ -22,15 +25,17 @@ export default function AllItemLayout() {
 
 
     for(let i=0;i<100;i++){
-      
+      let image1 = Math.floor(Math.random()* 5 + 1);
       let randType1 = Math.round(Math.random()*100)%5;
       let randType2 = Math.round(Math.random()*100)%5;
       let randType3 = Math.round(Math.random()*100)%5;
 
       let tempProduct = {
          productName : `Product ${i+1}`,
+         images : [image1, image1+100],
+         productType : getProductType(image1),
          description:`This is the description ${i+1} of above product`,
-         price : (Math.floor(Math.randam() * 96 )+5)*100,
+         price : Math.floor(Math.randam* 96 )+5*100,
          size :
           randType1 === 0
           ? randType2 === 0 
@@ -65,8 +70,9 @@ export default function AllItemLayout() {
          availbleqty: Math.round(Math.random()*100),
          sku :`SKU ${i+1}`,
       };
-     // console.log(tempProduct);
+     tempProductlist.push(tempProduct);
     }
+    setItemList(tempProductlist);
   },[])
   return (
     <Commonlayout>
@@ -75,7 +81,7 @@ export default function AllItemLayout() {
              Filter
           </Grid>
           <Grid item xs={12} md={10}>
-            <ProductList/>
+            <ProductList itemlist={itemlist}/>
           </Grid>
       </Grid>
 

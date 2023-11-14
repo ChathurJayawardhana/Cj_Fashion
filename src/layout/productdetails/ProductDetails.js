@@ -3,7 +3,7 @@ import Commonlayout from '../common/Commonlayout'
 import { Grid, Typography } from '@mui/material'
 import ImageSlider from './left/ImageSlider'
 import img01 from "../../images/productimages/img 01.jpg";
-import img011 from "../../images/productimages/img 011.jpg";
+import img101 from "../../images/productimages/img 101.jpg";
 import Productdetails2 from './right/Productdetails2';
 
 const product = {
@@ -32,7 +32,7 @@ export default function ProductDetails() {
           }}>
             <Grid container spacing={3} alignContent='center'>
                 <Grid item xs={12} md={6} lg={4}>
-                 <ImageSlider images = {[img01,img011]}/>
+                 <ImageSlider images = {[img01,img101]}/>
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={8}>

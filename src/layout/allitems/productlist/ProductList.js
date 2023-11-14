@@ -16,12 +16,12 @@ const products = [
  
 ];
 
-export default function ProductList() {
+export default function ProductList({itemlist}) {
   return (
     <div>
       
       <Grid container>
-        {products.map((val,key)=>{
+        {itemlist.map((val,key)=>{
           return(
             <Grid key={key} item xs={12} sm={6} md={4} lg={3}>
          <SingleProduct product={val}/>
