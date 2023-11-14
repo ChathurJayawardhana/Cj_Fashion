@@ -65,7 +65,7 @@ export default function AllItemLayout() {
          availbleqty: Math.round(Math.random()*100),
          sku :`SKU ${i+1}`,
       };
-      console.log(tempProduct);
+     // console.log(tempProduct);
     }
   },[])
   return (
