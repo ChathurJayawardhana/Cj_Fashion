@@ -5,6 +5,7 @@ import ImageSlider from './left/ImageSlider'
 import img01 from "../../images/productimages/img 01.jpg";
 import img101 from "../../images/productimages/img 101.jpg";
 import Productdetails2 from './right/Productdetails2';
+import { useSelector } from 'react-redux';
 
 const product = {
   productName : "product 0",
@@ -19,6 +20,14 @@ const product = {
 }
 
 export default function ProductDetails() {
+
+   const productState = useSelector((state) => state.productReducer);
+   
+   const {selectedProduct} = productState;
+
+   console.log(selectedProduct);
+
+
   return (
     <div>
       <Commonlayout>

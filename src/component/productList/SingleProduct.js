@@ -4,6 +4,8 @@ import ProductName from './singleproduct/ProductName'
 import ProductPrise from './singleproduct/ProductPrise'
 import ProductSize from './singleproduct/ProductSize'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setSelectedProduct } from '../../store/actions/productAction'
 
 //const product = {
  //   productName : "product 0",
@@ -18,9 +20,17 @@ import { Link } from 'react-router-dom'
 //}
 
 export default function ({product}) {
+  const dispatch = useDispatch();
     const {images,productName,productType,price,size} = product;
+
+
+     const handleClick = () => {
+      dispatch(setSelectedProduct(product));
+     };
+
       return (
-    <div style={{padding:"8px"}}>
+    <div style={{padding:"8px"}} onClick={handleClick}>
+
         <Link to={"/details"} style={{textDecoration:"none",color:"black"}}>
             <div style={{padding:"5px",width:"100%",borderRadius:"10px",paddingBottom:"20px"}}>
             <Productimage images={images}/>

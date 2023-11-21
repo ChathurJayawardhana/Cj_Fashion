@@ -1,7 +1,8 @@
-import React from 'react'
-import Commonlayout from '../common/Commonlayout'
-import { Grid } from '@mui/material'
-import ProductList from './productlist/ProductList'
+import React from 'react';
+import axios from 'axios';
+import Commonlayout from '../common/Commonlayout';
+import { Grid } from '@mui/material';
+import ProductList from './productlist/ProductList';
 import { getProductType } from '../../util/util';
 
 export default function AllItemLayout() {
@@ -20,6 +21,8 @@ export default function AllItemLayout() {
     sku : "SKU001",
   },*/
 
+
+  /*
   React.useEffect(()=>{
     let tempProductlist = [];
 
@@ -74,6 +77,17 @@ export default function AllItemLayout() {
     }
     setItemList(tempProductlist);
   },[])
+  */
+ React.useEffect(()=>{
+  axios
+  .get("https://cdn.radikadilanka.com/data.json")
+  .then((response)=>{
+    console.log(response.data);
+    setItemList(response.data);
+  })
+  .catch(()=>{});
+ },[]);
+
   return (
     <Commonlayout>
       <Grid container>
