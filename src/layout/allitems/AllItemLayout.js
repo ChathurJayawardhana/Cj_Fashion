@@ -1,13 +1,20 @@
 import React from 'react';
+
 import axios from 'axios';
 import Commonlayout from '../common/Commonlayout';
 import { Grid } from '@mui/material';
 import ProductList from './productlist/ProductList';
 import { getProductType } from '../../util/util';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProductList, fetchProductListBegin } from '../../store/actions/productAction';
 
 export default function AllItemLayout() {
-  const [itemlist,setItemList] = React.useState([]);
+ 
+ const dispatch = useDispatch();
 
+ const productState = useSelector((store)=>store.productReducer);
+ const{productListLoadingStatus,ProductList}=productState;
+ 
  
 /*
   {
@@ -78,15 +85,10 @@ export default function AllItemLayout() {
     setItemList(tempProductlist);
   },[])
   */
- React.useEffect(()=>{
-  axios
-  .get("https://cdn.radikadilanka.com/data.json")
-  .then((response)=>{
-    console.log(response.data);
-    setItemList(response.data);
-  })
-  .catch(()=>{});
- },[]);
+/* React.useEffect(()=>{
+   dispatch(fetchProductListBegin());
+   dispatch(fetchProductList());
+ },[]);*/
 
   return (
     <Commonlayout>
@@ -95,11 +97,23 @@ export default function AllItemLayout() {
              Filter
           </Grid>
           <Grid item xs={12} md={10}>
-            <ProductList itemlist={itemlist}/>
+          {productListLoadingStatus === "loading" ? (
+           <div>Loading...</div>
+          ):productListLoadingStatus === "completed" ? (
+            <ProductList itemlist={ProductList}/>
+          ) :productListLoadingStatus === "failuer"?(
+            <div>Error</div>
+          ): (
+            ""
+          )
+        }
+           
           </Grid>
       </Grid>
-
+ 
     </Commonlayout>
    
   )
 }
+
+

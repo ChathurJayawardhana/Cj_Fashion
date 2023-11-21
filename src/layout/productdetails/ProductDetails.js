@@ -11,7 +11,7 @@ const product = {
   productName : "product 0",
   productType :"dress5",
   price:"8400",
-  size:["xs","sm","L"],
+  size:["xs","sm","L"], 
   images:[0,2],
   description:"This is the description of above product",
   availbleqty:1000,
@@ -22,7 +22,7 @@ const product = {
 export default function ProductDetails() {
 
    const productState = useSelector((state) => state.productReducer);
-   
+
    const {selectedProduct} = productState;
 
    console.log(selectedProduct);
@@ -45,7 +45,7 @@ export default function ProductDetails() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={8}>
-                         <Productdetails2 product={product}/>
+                         <Productdetails2 product={selectedProduct}/>
                          <hr style={{marginTop:"-5px"}}/>
                          <Typography style={{color:"gray",textAlign:"left",}}>
                           Note:This is the product 0 if you want this pls add to cart
