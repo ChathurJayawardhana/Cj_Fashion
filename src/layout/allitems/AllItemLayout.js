@@ -4,9 +4,9 @@ import axios from 'axios';
 import Commonlayout from '../common/Commonlayout';
 import { Grid } from '@mui/material';
 import ProductList from './productlist/ProductList';
-import { getProductType } from '../../util/util';
+//import { getProductType } from '../../util/util';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProductList, fetchProductListBegin } from '../../store/actions/productAction';
+//import { fetchProductList, fetchProductListBegin } from '../../store/actions/productAction';
 
 export default function AllItemLayout() {
  
